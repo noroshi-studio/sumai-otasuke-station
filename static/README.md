@@ -1,6 +1,8 @@
 # 静的確認版
 
-`index.html` をブラウザで直接開くか、このディレクトリでローカルサーバーを起動して確認できます。
+公開プレビュー: <https://noroshi-studio.github.io/sumai-otasuke-station/>
+
+ローカルでは `index.html` をブラウザで直接開くか、リポジトリのルートでローカルサーバーを起動して確認できます。
 
 ```bash
 python3 -m http.server 8080 --directory static

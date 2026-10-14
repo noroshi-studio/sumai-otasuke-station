@@ -1,6 +1,8 @@
 # 住まいのお助け便利屋ステーション
 
-制作途中のホームページのソースです。WordPressテーマを本体として維持し、`static/` にブラウザで確認できる静的版を保存しています。GitHubへの保存とWeb公開は別の作業です。
+制作途中のホームページのソースです。WordPressテーマを本体として維持し、`static/` にブラウザで確認できる静的版を保存しています。静的版のみGitHub Pagesで公開しています。
+
+公開プレビュー: <https://noroshi-studio.github.io/sumai-otasuke-station/>
 
 ## 構成
 
@@ -8,6 +10,7 @@
 | --- | --- |
 | `sumai-otasuke-station/` | WordPressテーマ本体（PHP、CSS、JavaScript、画像） |
 | `static/` | 静的な表示確認用（HTML、CSS、JavaScript、画像） |
+| `.github/workflows/pages.yml` | `main` へのプッシュで `static/` をGitHub Pagesへ公開 |
 | `ADMIN-GUIDE.md` | WordPress管理画面での変更方法 |
 | `IMAGE-LIST.md` | 画像の用途と差し替え先 |
 | `PUBLICATION-CHECKLIST.md` | Web公開前の確認事項 |
@@ -39,11 +42,13 @@ WordPressの投稿、メディアライブラリ、カスタマイザーの保�
 
 ```bash
 git status
-git add README.md .gitignore ADMIN-GUIDE.md IMAGE-LIST.md PUBLICATION-CHECKLIST.md TEST-RESULTS.md static/ sumai-otasuke-station/
+git add README.md .gitignore .github/ ADMIN-GUIDE.md IMAGE-LIST.md PUBLICATION-CHECKLIST.md TEST-RESULTS.md static/ sumai-otasuke-station/
 git commit -m "ホームページを更新"
 git push origin main
 ```
 
 追加ファイルがある場合は `git status` で内容を確認してから個別に `git add` してください。配布用の `sumai-otasuke-station.zip` はテーマフォルダから作り直せるため、Gitの対象外です。必要な場合はリポジトリのルートで `zip -qr sumai-otasuke-station.zip sumai-otasuke-station/` を実行します。
 
-GitHubへプッシュしてもWordPressサイトは自動更新されません。Web公開や本番テーマの更新は、公開先と手順を確認してから別途行います。GitHub PagesではWordPressのPHPや管理画面は動作しません。
+`main` にプッシュすると、GitHub Actionsが `static/` の内容を公開プレビューへ反映します。反映まで数分かかることがあります。公開リポジトリなので、認証情報・顧客情報・非公開資料を追加しないでください。
+
+GitHubへプッシュしてもWordPressサイトは自動更新されません。本番テーマの更新は、公開先と手順を確認してから別途行います。GitHub PagesではWordPressのPHPや管理画面は動作しません。
