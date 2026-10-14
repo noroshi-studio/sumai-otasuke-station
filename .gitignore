@@ -1,0 +1,30 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Local credentials, database exports, logs and temporary files
+.env
+.env.*
+!.env.example
+wp-config.php
+*.sql
+*.sqlite
+*.sqlite3
+*.log
+*.tmp
+*.bak
+
+# Generated files and local dependencies
+node_modules/
+vendor/
+dist/
+build/
+.cache/
+wp-content/uploads/
+wp-content/cache/
+sumai-otasuke-station.zip

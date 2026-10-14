@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": { "contentSize": "760px", "wideSize": "1180px" },
+    "color": {
+      "palette": [
+        { "slug": "station-green", "name": "ステーショングリーン", "color": "#0b604d" },
+        { "slug": "deep-navy", "name": "濃紺", "color": "#182a35" },
+        { "slug": "warm-cream", "name": "生成り", "color": "#f7f1e4" },
+        { "slug": "mustard", "name": "マスタード", "color": "#e0a82e" },
+        { "slug": "accent-orange", "name": "オレンジ", "color": "#d96535" }
+      ]
+    },
+    "typography": { "fluid": true, "lineHeight": true }
+  },
+  "styles": {
+    "color": { "background": "#f7f1e4", "text": "#263630" },
+    "typography": { "fontFamily": "-apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif", "lineHeight": "1.8" }
+  }
+}
